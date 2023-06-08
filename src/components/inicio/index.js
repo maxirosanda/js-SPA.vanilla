@@ -1,19 +1,16 @@
-import view from "./view.hbs"
-import Handlebars from 'handlebars/dist/handlebars';
-console.log(view)
+import template from "./index.hbs"
+
 export default () => {
-  const divElement = document.createElement("div");
-  const template = Handlebars.compile(view);
+  const divElement = document.createElement("div")
   const data = {
     buttonId: 'btnClick',
     buttonText: 'click me'
-  };
-  const renderedTemplate = template(data);
-  divElement.innerHTML = renderedTemplate;
-  const btnClick = divElement.querySelector("#btnClick");
+  }
+  divElement.innerHTML = template(data)
+  const btnClick = divElement.querySelector("#btnClick")
   btnClick.addEventListener("click", () => {
-    alert("clicked");
-  });
+    alert("clicked")
+  })
 
-  return divElement;
-};
+  return divElement
+}

@@ -1,7 +1,6 @@
 import './index.scss'
 import  {router}  from "./index.routes";
 
-
 const init = () => {
   router(window.location.hash);
 

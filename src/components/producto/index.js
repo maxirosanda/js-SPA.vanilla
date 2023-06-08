@@ -1,8 +1,6 @@
-import view from "./index.hbs"
-export default (nombre,precio) => {
+import template from "./index.hbs"
+export default (datos) => {
   const divElement = document.createElement("div")
-  divElement.innerHTML = `
-                          <p>${nombre}</p>
-                          `
+  divElement.innerHTML = template(datos)
   return divElement
 }

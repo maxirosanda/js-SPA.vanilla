@@ -11,7 +11,15 @@ module.exports = {
   },
   plugins: [
     new HtmlWebpackPlugin({
-      template: "./src/index.html",
+      title: "JS SPA Vanilla",
+      template: "./index.hbs",
+      minify: {
+        html5: true,
+        collapseWhitespace: true,
+        caseSensitive: true,
+        removeComments: true,
+        removeEmptyElements: true,
+      },
     }),
     new MiniCssExtractPlugin(),
   ],
@@ -25,10 +33,7 @@ module.exports = {
             test: /\.s[ac]ss$/i,
             use: [{loader: MiniCssExtractPlugin.loader,},"css-loader","sass-loader"],
         },
-        {
-            test: /\.html$/i,
-            loader: "html-loader",
-        },
+ 
         { test: /\.hbs$/, 
           loader: "handlebars-loader" 
     }

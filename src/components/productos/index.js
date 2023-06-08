@@ -1,4 +1,4 @@
-import view from "./index.hbs"
+import template from "./index.hbs"
 import Producto from "../producto/index"
 const productos = [
   { nombre: "Producto 1", precio: 10 },
@@ -12,11 +12,11 @@ const productos = [
 ];
 export default () => {
   const divElement = document.createElement("div")
-  divElement.innerHTML = view
+  divElement.innerHTML = template()
   const contenedorProductos= divElement.querySelector('#contenedorProductos');
 
-  productos.forEach(({nombre,precio}) => {
-    contenedorProductos.append(Producto(nombre,precio))
+  productos.forEach((datos) => {
+    contenedorProductos.append(Producto(datos))
   });
 
   return divElement
