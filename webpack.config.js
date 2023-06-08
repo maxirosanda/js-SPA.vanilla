@@ -11,15 +11,7 @@ module.exports = {
   },
   plugins: [
     new HtmlWebpackPlugin({
-      title: "JS SPA Vanilla",
-      template: "./index.hbs",
-      minify: {
-        html5: true,
-        collapseWhitespace: true,
-        caseSensitive: true,
-        removeComments: true,
-        removeEmptyElements: true,
-      },
+      template: "./src/index.html",
     }),
     new MiniCssExtractPlugin(),
   ],
