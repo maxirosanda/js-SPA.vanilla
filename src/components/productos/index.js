@@ -1,5 +1,7 @@
 import template from "./index.hbs"
 import Producto from "../producto/index"
+import './index.scss'
+
 const productos = [
   { nombre: "Producto 1", precio: 10 },
   { nombre: "Producto 2", precio: 20 },

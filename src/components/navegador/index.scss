@@ -1,0 +1,18 @@
+.navegador{
+    background-color: blue;
+    display: flex;
+    justify-content: end;
+    >ul{
+        list-style: none;
+        display: flex;
+        >li{
+            >a{
+                display: block;
+                padding: 10px 20px;
+                color: white;
+                text-decoration: none;
+                font-size: 20px;
+            }
+        }
+    }
+}
