@@ -10,7 +10,7 @@ export default () => {
   divElement.innerHTML = template(data)
   const btnClick = divElement.querySelector("#btnClick")
   btnClick.addEventListener("click", () => {
-    alert("clicked")
+    location.href ="#/productos" 
   })
 
   return divElement
