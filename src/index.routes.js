@@ -5,12 +5,19 @@ import Navegador from "./components/navegador/index"
 import Footer from "./components/footer/index"
 import NotFound from "./pages/notFound/index"
 
+let firt = true 
+const root = document.getElementById("root")
+const content = document.createElement("div")
+root.append(content)
+content.id = "content"
+
 export const router = (route) => {
-  
+
   const [,page,...param] = route.split("/")
-  const content = document.getElementById("root")
   content.innerHTML = ""
-  content.append(Navegador())
+  console.log(firt)
+  if (firt) root.prepend(Navegador())
+
   switch (page) {
     case "": {
          content.append(Inicio())
@@ -29,6 +36,6 @@ export const router = (route) => {
       break
   }
 }
-content.append(Footer())
-
-}
+  if(firt) root.append(Footer())
+  firt = false
+}  
