@@ -1,9 +1,9 @@
-import Inicio from "./components/inicio/index"
-import Productos from "./components/productos/index"
-import ProductoPage from "./components/productoPage"
+import Inicio from "./pages/inicio/index"
+import Productos from "./pages/productos/index"
+import ProductoPage from "./pages/productoPage"
 import Navegador from "./components/navegador/index"
 import Footer from "./components/footer/index"
-import NotFound from "./components/notFound/index"
+import NotFound from "./pages/notFound/index"
 
 export const router = (route) => {
   

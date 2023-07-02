@@ -1,5 +1,5 @@
 import template from "./index.hbs"
-import Producto from "../producto/index"
+import Producto from "../../components/producto/index"
 import './index.scss'
 
 const productos = [
