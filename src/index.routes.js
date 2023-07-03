@@ -4,8 +4,9 @@ import ProductoPage from "./pages/productoPage"
 import Navegador from "./components/navegador/index"
 import Footer from "./components/footer/index"
 import NotFound from "./pages/notFound/index"
+import { state } from "../hooks/state"
 
-let firt = true 
+const [firt,setFirt] = state(true)
 const root = document.getElementById("root")
 const content = document.createElement("div")
 root.append(content)
@@ -16,7 +17,7 @@ export const router = (route) => {
   const [,page,...param] = route.split("/")
   content.innerHTML = ""
   console.log(firt)
-  if (firt) root.prepend(Navegador())
+  if (firt()) root.prepend(Navegador())
 
   switch (page) {
     case "": {
@@ -36,6 +37,6 @@ export const router = (route) => {
       break
   }
 }
-  if(firt) root.append(Footer())
-  firt = false
+  if(firt()) root.append(Footer())
+  setFirt(false)
 }  
